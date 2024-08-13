@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "23724774365",
+    "project_id": "comp3025-finalexam-6ac98",
+    "storage_bucket": "comp3025-finalexam-6ac98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23724774365:android:8ad6c68b6ae6d0dea65c34",
+        "android_client_info": {
+          "package_name": "ca.georgiancollege.final_exam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbbTIMFltYvlxXv-aNpMpY77u5Uj6zk9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
