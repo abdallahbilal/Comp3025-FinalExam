@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import ca.georgiancollege.final_exam.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity()
 {
@@ -40,10 +41,10 @@ class MainActivity : AppCompatActivity()
         }
 
         // TODO: uncomment after you implement your persistent data method
-        //viewModel.loadAllHealthStats()
+        viewModel.loadAllHealthStats()
 
         // TODO: Remove after you implement your persistent data method
-        viewModel.loadMockHealthStats()
+       // viewModel.loadMockHealthStats()
 
         binding.addHealthStatFAB.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java).apply {
@@ -57,10 +58,10 @@ class MainActivity : AppCompatActivity()
     {
         super.onResume()
         // TODO: uncomment after you implement your persistent data method
-        //viewModel.loadAllHealthStats()
+        viewModel.loadAllHealthStats()
 
         // TODO: Remove after you implement your persistent data method
-        viewModel.loadMockHealthStats()
+        //viewModel.loadMockHealthStats()
 
     }
 }

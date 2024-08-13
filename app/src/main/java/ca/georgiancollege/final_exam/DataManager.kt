@@ -5,7 +5,6 @@ import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import android.util.Log
 import kotlinx.coroutines.tasks.await
 
 class DataManager private constructor()
@@ -73,7 +72,7 @@ class DataManager private constructor()
     }
 
     // Function to get all HealthStats
-    suspend fun getAllHealthStats(): List<HealthStat> {
+   suspend fun getAllHealthStats(): List<HealthStat> {
         return try {
             val result = db.collection("healthStats").get().await()
             result?.toObjects(HealthStat::class.java) ?: emptyList()

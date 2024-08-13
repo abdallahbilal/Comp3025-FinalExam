@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.75" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/healthStatRecyclerView"
         android:layout_width="match_parent"
@@ -38,12 +39,31 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="60dp"
         android:clickable="true"
+        android:contentDescription="@string/add_health_stat"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="@string/add_health_stat" />
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08071136" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

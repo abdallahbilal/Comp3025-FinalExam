@@ -10,7 +10,7 @@
     <string name="weight">Weight</string>
     <string name="date">Date</string>
     <string name="stat">Stat</string>
-    <string name="your_health_stats">Your Health Stats</string>
+    <string name="your_health_stats">BMI Tracker</string>
     <string name="increment">Increment</string>
     <string name="decrement">Decrement</string>
     <string name="pounds">pounds</string>

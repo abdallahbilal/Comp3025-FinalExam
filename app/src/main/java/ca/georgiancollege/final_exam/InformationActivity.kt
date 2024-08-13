@@ -49,9 +49,9 @@ class InformationActivity : AppCompatActivity()
             val weight = binding.weightEditText.text.toString().toDoubleOrNull() ?: 0.0
             val height = binding.heightEditText.text.toString().toDoubleOrNull() ?: 0.0
             calculateBMI(weight,height)
-
             saveHealthStat()
-           // goToMainActivity()
+            goToMainActivity()
+
         }
 
         // Handle the Cancel button click
@@ -247,7 +247,6 @@ class InformationActivity : AppCompatActivity()
     private fun calculateBMI(weight: Double, height: Double): Any {
 
         val bmi = weight/(height*height);
-        = binding.BMI.text.toString().toDoubleOrNull() ?: 0.0
         return bmi;
     }
 
@@ -265,6 +264,10 @@ class InformationActivity : AppCompatActivity()
         intent.putExtra("metric", binding.unitSwitch.isChecked)  // Pass the metric system selection
         startActivity(intent)
     }
+
+
+
+
 
     /**
      * Resets the form fields to their original state, including the unit system.
