@@ -8,6 +8,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import ca.georgiancollege.final_exam.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 
+/*
+*
+* Abdallah Bilal
+* Comp 3025 Final Exam
+* 2024/08/13
+*
+* */
+
+
 class MainActivity : AppCompatActivity()
 {
     private lateinit var binding: ActivityMainBinding

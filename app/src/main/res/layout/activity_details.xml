@@ -95,33 +95,38 @@
     <!-- Buttons Section -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="104dp"
+        android:paddingTop="20dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/saveButton"
-            android:layout_width="wrap_content"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/Success"
-            android:text="@string/save" />
+            android:text="@string/save"/>
 
         <Button
             android:id="@+id/cancelButton"
-            android:layout_width="wrap_content"
+            android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/Warning"
-            android:text="@string/cancel" />
+            android:text="@string/cancel"
+            />
 
         <Button
             android:id="@+id/deleteButton"
-            android:layout_width="wrap_content"
+            android:layout_width="126dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/Danger"
             android:text="@string/delete" />
 
+
     </LinearLayout>
+
+
 
 </LinearLayout>
