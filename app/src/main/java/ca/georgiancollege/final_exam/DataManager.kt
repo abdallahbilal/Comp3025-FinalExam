@@ -2,8 +2,15 @@ package ca.georgiancollege.final_exam
 
 import android.util.Log
 
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import android.util.Log
+import kotlinx.coroutines.tasks.await
+
 class DataManager private constructor()
 {
+    private val db: FirebaseFirestore = Firebase.firestore
 
     companion object
     {
@@ -31,6 +38,7 @@ class DataManager private constructor()
     suspend fun insert(healthStat: HealthStat){
         try
         {
+            db.collection("healthStats").document(healthStat.id).set(healthStat).await()
             Log.i(TAG, "Inserting HealthStat: $healthStat")
         }
         catch(e: Exception)
@@ -43,6 +51,8 @@ class DataManager private constructor()
     suspend fun update(healthStat: HealthStat){
         try
         {
+            db.collection("healthStats").document(healthStat.id).set(healthStat).await()
+
             Log.i(TAG, "Updating HealthStat: $healthStat")
         }
         catch(e: Exception)
@@ -55,6 +65,7 @@ class DataManager private constructor()
     suspend fun delete(healthStat: HealthStat) {
         try
         {
+            db.collection("healthStats").document(healthStat.id).delete().await()
             Log.i(TAG, "Deleting HealthStat: $healthStat")
         } catch (e: Exception) {
             Log.e(TAG, "Error deleting TVShow: ${e.message}", e)
@@ -64,8 +75,8 @@ class DataManager private constructor()
     // Function to get all HealthStats
     suspend fun getAllHealthStats(): List<HealthStat> {
         return try {
-            Log.i(TAG, "Getting all Health Stats")
-            emptyList()
+            val result = db.collection("healthStats").get().await()
+            result?.toObjects(HealthStat::class.java) ?: emptyList()
         }
         catch(e: Exception)
         {
@@ -77,8 +88,8 @@ class DataManager private constructor()
     // Function to get a HealthStat by ID
     suspend fun getHealthStatById(id: String): HealthStat? {
         return try {
-            Log.i(TAG, "Getting HealthStat by ID: $id")
-            HealthStat()
+            val result = db.collection("healthStats").document(id).get().await()
+            result?.toObject(HealthStat::class.java)
         }
         catch (e: Exception)
         {

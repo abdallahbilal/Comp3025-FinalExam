@@ -24,4 +24,6 @@
     <string name="personal_information">Personal Information</string>
     <string name="cm">cm</string>
     <string name="kg">kg</string>
+    <string name="your_bmi">Your BMI:</string>
+    <string name="bmiNumber">00.0\n</string>
 </resources>

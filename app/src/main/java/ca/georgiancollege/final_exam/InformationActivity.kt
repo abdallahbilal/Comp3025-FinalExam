@@ -46,8 +46,12 @@ class InformationActivity : AppCompatActivity()
 
         // Handle the Submit button click
         binding.submitButton.setOnClickListener {
+            val weight = binding.weightEditText.text.toString().toDoubleOrNull() ?: 0.0
+            val height = binding.heightEditText.text.toString().toDoubleOrNull() ?: 0.0
+            calculateBMI(weight,height)
+
             saveHealthStat()
-            goToMainActivity()
+           // goToMainActivity()
         }
 
         // Handle the Cancel button click
@@ -224,6 +228,8 @@ class InformationActivity : AppCompatActivity()
         val height = binding.heightEditText.text.toString().toDoubleOrNull() ?: 0.0
         val weight = binding.weightEditText.text.toString().toDoubleOrNull() ?: 0.0
         val metric = binding.unitSwitch.isChecked
+        val bmi = binding.BMI.text.toString().toDoubleOrNull() ?: 0.0
+
 
         // Create a new HealthStat object
         val healthStat = HealthStat(
@@ -232,9 +238,17 @@ class InformationActivity : AppCompatActivity()
             age = age,
             height = height,
             weight = weight,
-            metric = metric
+            metric = metric,
+            bmi = bmi
         )
 
+    }
+
+    private fun calculateBMI(weight: Double, height: Double): Any {
+
+        val bmi = weight/(height*height);
+        = binding.BMI.text.toString().toDoubleOrNull() ?: 0.0
+        return bmi;
     }
 
     /**

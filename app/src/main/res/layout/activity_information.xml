@@ -265,4 +265,25 @@
             android:backgroundTint="@color/Warning"
             android:text="@string/cancel" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/YourBMI"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="@string/your_bmi"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/BMI"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="@string/bmiNumber"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
 </LinearLayout>

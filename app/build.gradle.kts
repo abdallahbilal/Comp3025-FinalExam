@@ -56,6 +56,7 @@ dependencies {
     //firebase dependecies
 
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+    implementation(libs.firebase.firestore.ktx)
 
 
     // Testing Dependencies
